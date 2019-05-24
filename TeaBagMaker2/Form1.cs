@@ -32,16 +32,7 @@ namespace TeaBagMaker2
                 this.cbList.SelectedIndex = 0;
             }
 
-            if (orgStr.Equals("홍차"))
-            {
-                CountOrgNum = 180;
-            }
-            else if (orgStr.Equals("루이보스차"))
-            {
-                CountOrgNum = 300;
-            }
-            else
-                CountOrgNum = 120;
+           
 
         }
 
@@ -66,7 +57,19 @@ namespace TeaBagMaker2
 
         private void BtnCount_Click(object sender, EventArgs e)
         {
-         this.Timer.Enabled = true;
+            
+            if (orgStr.Equals("홍차"))
+            {
+                CountOrgNum = 180;
+            }
+            else if (orgStr.Equals("루이보스차"))
+            {
+                CountOrgNum = 300;
+            }
+            else
+                CountOrgNum = 120;
+
+            this.Timer.Enabled = true;
         
         }
     }
