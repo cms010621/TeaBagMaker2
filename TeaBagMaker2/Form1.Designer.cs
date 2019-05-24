@@ -29,12 +29,70 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.cbList = new System.Windows.Forms.ComboBox();
+            this.btnCount = new System.Windows.Forms.Button();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
+            this.txtCountDown = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // cbList
+            // 
+            this.cbList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbList.FormattingEnabled = true;
+            this.cbList.Location = new System.Drawing.Point(13, 13);
+            this.cbList.Name = "cbList";
+            this.cbList.Size = new System.Drawing.Size(408, 20);
+            this.cbList.TabIndex = 0;
+            // 
+            // btnCount
+            // 
+            this.btnCount.Location = new System.Drawing.Point(13, 40);
+            this.btnCount.Name = "btnCount";
+            this.btnCount.Size = new System.Drawing.Size(408, 80);
+            this.btnCount.TabIndex = 1;
+            this.btnCount.Text = "담그기!";
+            this.btnCount.UseVisualStyleBackColor = true;
+            this.btnCount.Click += new System.EventHandler(this.BtnCount_Click);
+            // 
+            // Timer
+            // 
+            this.Timer.Interval = 1000;
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
+            // txtCountDown
+            // 
+            this.txtCountDown.Font = new System.Drawing.Font("굴림", 20F);
+            this.txtCountDown.Location = new System.Drawing.Point(13, 126);
+            this.txtCountDown.Name = "txtCountDown";
+            this.txtCountDown.ReadOnly = true;
+            this.txtCountDown.Size = new System.Drawing.Size(408, 38);
+            this.txtCountDown.TabIndex = 2;
+            this.txtCountDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(433, 211);
+            this.Controls.Add(this.txtCountDown);
+            this.Controls.Add(this.btnCount);
+            this.Controls.Add(this.cbList);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "Form1";
+            this.Text = "TeaBagMaker";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox cbList;
+        private System.Windows.Forms.Button btnCount;
+        private System.Windows.Forms.Timer Timer;
+        private System.Windows.Forms.TextBox txtCountDown;
     }
 }
 
